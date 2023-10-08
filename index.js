@@ -89,7 +89,9 @@ app.use("/blogs", blogRouter)
 // app.use("/comment", commentRouter)
 
 
-app.listen(8021, async () => {
+const PORT = process.env.PORT || 8021
+
+app.listen(PORT, async () => {
     try {
         await connection
         console.log("DB Success to Connected")
